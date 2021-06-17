@@ -49,7 +49,7 @@ public final class FillRectangleDrawableConsumer implements DrawableConsumer {
         float b = (color & 255) / 255.0F;
         RenderSystem.disableTexture();
         RenderSystem.enableBlend();
-        //RenderSystem.disableAlphaTest();
+        RenderSystem.disableAlphaTest();
         RenderSystem.defaultBlendFunc();
         RenderSystem.shadeModel(7425);
         Tesselator tessellator = Tesselator.getInstance();
