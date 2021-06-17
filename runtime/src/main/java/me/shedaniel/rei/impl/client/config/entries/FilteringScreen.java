@@ -250,7 +250,7 @@ public class FilteringScreen extends Screen {
         BufferBuilder buffer = tesselator.getBuilder();
         RenderSystem.enableBlend();
         RenderSystem.blendFuncSeparate(770, 771, 0, 1);
-        //RenderSystem.disableAlphaTest();
+        RenderSystem.disableAlphaTest();
         RenderSystem.shadeModel(7425);
         RenderSystem.disableTexture();
         Matrix4f matrix = matrices.last().pose();
