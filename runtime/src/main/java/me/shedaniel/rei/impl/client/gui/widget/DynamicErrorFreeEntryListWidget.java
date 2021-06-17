@@ -222,7 +222,7 @@ public abstract class DynamicErrorFreeEntryListWidget<E extends DynamicErrorFree
         this.renderHoleBackground(matrices, this.bottom, this.height, 255, 255);
         RenderSystem.enableBlend();
         RenderSystem.blendFuncSeparate(770, 771, 0, 1);
-        //RenderSystem.disableAlphaTest();
+        RenderSystem.disableAlphaTest();
         RenderSystem.shadeModel(7425);
         RenderSystem.disableTexture();
         Matrix4f matrix = matrices.last().pose();
