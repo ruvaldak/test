@@ -502,7 +502,7 @@ public class TextFieldWidget extends WidgetWithBounds implements TickableWidget,
         BufferBuilder buffer = tesselator.getBuilder();
         RenderSystem.disableTexture();
         RenderSystem.enableBlend();
-        //RenderSystem.disableAlphaTest();
+        RenderSystem.disableAlphaTest();
         RenderSystem.blendFuncSeparate(770, 771, 1, 0);
         RenderSystem.shadeModel(7425);
         Matrix4f matrix = matrices.last().pose();
