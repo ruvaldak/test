@@ -235,7 +235,7 @@ public class ItemEntryDefinition implements EntryDefinition<ItemStack>, EntrySer
         @Override
         public void endBatch(EntryStack<ItemStack> entry, PoseStack matrices, float delta) {
             RenderSystem.enableDepthTest();
-            //RenderSystem.disableAlphaTest();
+            RenderSystem.disableAlphaTest();
             RenderSystem.disableRescaleNormal();
             boolean sideLit = getModelFromStack(entry.getValue()).usesBlockLight();
             if (!sideLit)
