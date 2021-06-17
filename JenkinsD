@@ -1,0 +1,18 @@
+pipeline {
+   agent any
+   stages {
+
+      stage ('Build') {
+         when {
+            expression { env.BRANCH_NAME == '4.x' || env.BRANCH_NAME == '5.x' }
+         }
+         steps {
+            sh "rm -rf build/libs/"
+            sh "chmod +x gradlew"
+            sh "./gradlew clean build publish --refresh-dependencies --stacktrace"
+
+            archiveArtifacts artifacts: '**/build/libs/*.jar', fingerprint: true
+         }
+      }
+   }
+}
